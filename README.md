@@ -5,3 +5,5 @@
 This is my first project of landing page introduced by Odin Project -> Flexbox
 
 Author: GNTDev
+
+:P
