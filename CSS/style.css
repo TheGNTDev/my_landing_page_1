@@ -1,11 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --theme-background-dark: #1f2937;
+  --theme-background-light: #3b82f6;
+  --theme-text-white-primary: #f9fafb;
+  --theme-text-white-secondary: #dfe1e5;
+  --theme-text-dark-grey: #58606c;
+  --theme-text-light-grey: #e5e7eb;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--theme-text-white-primary);
 }
 
 img {
+  /* height: auto; */
   max-width: 100%;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  text-decoration: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0px;
+  left: -10000px;
+}
+
+.skip-link:focus {
+  left: 0px;
+}
+
+.width-limit {
+  max-width: 900px;
+  margin: auto;
+}
+
+.header-wrapper,
+.footer-wrapper {
+  background-color: var(--theme-background-dark);
+}
+
+.page-information-tiles,
+.page-quotes,
+.sign-up-section-content-wrapper {
+  max-width: 700px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.2rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.sign-up-btn {
+  background-color: #3b82f6;
+}
+
+.white-border {
+  border: 3px solid white;
+}
+
+.text-white-dark {
+  color: var(--theme-text-white-secondary);
+}
+
+.text-grey-dark {
+  color: var(--theme-text-dark-grey);
+}
+
+/* Header */
+
+.header-navigation-containers-wrapper,
+.navigation-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.header-wrapper {
+  padding-bottom: 5rem;
+}
+
+.header-navigation-containers-wrapper {
+  margin-bottom: 100px;
+  padding-top: 2rem;
+}
+
+.header-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navigation-link-wrapper {
+  margin: auto 0.8rem;
+}
+
+.header-greeting {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.header-greeting-heading {
+  font-size: 2.72rem;
+  font-weight: bold;
+}
+
+.header-greeting-text {
+  padding: 0.5rem 2.2rem 0.5rem 0;
+}
+
+.header-greeting-carousel-wrapper {
+  max-width: 400px;
+}
+
+/* Main: Page information titles Article */
+
+.page-information-tiles {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 6.3rem;
+}
+
+.page-information-tiles-heading {
+  color: var(--theme-background-dark);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.9rem;
+  padding: 2.1rem;
+}
+
+.page-information-tile {
+  flex: 1;
+}
+
+.page-information-tile-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  border: 3px solid var(--theme-background-light);
+}
+
+.page-information-tile-description {
+  text-align: center;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+/* Main: Page Guotes Section */
+
+.page-quotes-wrapper {
+  background-color: var(--theme-text-light-grey);
+  padding: 5.2rem 0;
+}
+
+.page-quotes * {
+  color: var(--theme-background-dark);
+}
+
+.page-quote {
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding-left: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-quote-source {
+  display: block;
+  text-align: right;
+}
+
+.page-quote-source > strong {
+  font-weight: bold;
+}
+
+/* Main: Sign up Section */
+
+.sign-up-section-wrapper {
+  padding-top: 4.9rem;
+  padding-bottom: 4.9rem;
+}
+
+.sign-up-section {
+  background-color: var(--theme-background-light);
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sign-up-section-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 0;
+}
+
+/* Footer */
+
+.footer-wrapper {
+  text-align: center;
+  padding: 2.3rem 0;
 }
